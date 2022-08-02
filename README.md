@@ -229,6 +229,18 @@ That's what the `WithContextAttributes` mixin handles. It adds a `with_attribute
 
 ## Installation
 
+Add these lines to your application's Gemfile
+
+```ruby
+# Ideally replace the `branch: "main"` with a commit reference (`ref: COMMIT_HASH`)
+# https://bundler.io/guides/git.html
+gem "merge_attributes", github: "Amba-Health/merge_attributes", branch: "main"
+gem "view_component_attributes", github: "Amba-Health/view_component_attributes", branch: "main"
+```
+
+<details>
+<summary>Coming soon!</summary>
+
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -242,6 +254,8 @@ And then execute:
 Or install it yourself as:
 
     gem install view_component_attributes
+
+</details>
 
 ## Development
 
