@@ -1,10 +1,10 @@
 require "rails_helper"
 
-describe WithRoot, type: :component do
+describe ViewComponentAttributes::WithRoot, type: :component do
   describe "#root" do
     it "Renders a root tag with the relevant attributes" do
       component_class = Class.new(ViewComponent::Base) do
-        include WithRoot
+        include ViewComponentAttributes::WithRoot
       end
 
       component = component_class.new
@@ -14,7 +14,7 @@ describe WithRoot, type: :component do
 
     it "Renders a root component with the relevant attributes" do
       component_class = Class.new(ViewComponent::Base) do
-        include WithRoot
+        include ViewComponentAttributes::WithRoot
       end
 
       component = component_class.new
@@ -32,7 +32,7 @@ describe WithRoot, type: :component do
 
     it "Uses a `div` as default tag" do
       component_class = Class.new(ViewComponent::Base) do
-        include WithRoot
+        include ViewComponentAttributes::WithRoot
       end
 
       component = component_class.new
@@ -45,7 +45,7 @@ describe WithRoot, type: :component do
     describe "#root_attributes" do
       it "Is used for picking the attributes" do
         component_class = Class.new(ViewComponent::Base) do
-          include WithRoot
+          include ViewComponentAttributes::WithRoot
 
           def root_attributes(template_attributes)
             {class: "root-class",
@@ -62,7 +62,7 @@ describe WithRoot, type: :component do
     describe "#root_type" do
       it "Is used for picking the type of root" do
         component_class = Class.new(ViewComponent::Base) do
-          include WithRoot
+          include ViewComponentAttributes::WithRoot
 
           def root_type(template_root)
             :article
@@ -80,7 +80,7 @@ describe WithRoot, type: :component do
     describe "#root" do
       it "Configures the root as a tag" do
         component_class = Class.new(ViewComponent::Base) do
-          include WithRoot
+          include ViewComponentAttributes::WithRoot
 
           root :article
         end
@@ -92,7 +92,7 @@ describe WithRoot, type: :component do
 
       it "Configures the root as a component" do
         component_class = Class.new(ViewComponent::Base) do
-          include WithRoot
+          include ViewComponentAttributes::WithRoot
 
           root ViewComponent::Base
         end

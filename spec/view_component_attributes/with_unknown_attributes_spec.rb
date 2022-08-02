@@ -1,9 +1,9 @@
 require "rails_helper"
 
-describe WithUnknownAttributes do
+describe ViewComponentAttributes::WithUnknownAttributes do
   let(:subject_class) do
     Class.new do
-      include WithUnknownAttributes
+      include ViewComponentAttributes::WithUnknownAttributes
 
       attribute :known_attribute
     end

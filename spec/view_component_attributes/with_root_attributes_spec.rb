@@ -1,10 +1,10 @@
 require "rails_helper"
 
-describe WithRootAttributes do
+describe ViewComponentAttributes::WithRootAttributes do
   describe "Class methods" do
     it "Allows to configure static attributes as positional param" do
       component_class = Class.new do
-        include WithRootAttributes
+        include ViewComponentAttributes::WithRootAttributes
 
         root_attributes(class: "a-class")
       end
@@ -16,7 +16,7 @@ describe WithRootAttributes do
 
     it "Allows to compute attributes from instance" do
       component_class = Class.new do
-        include WithRootAttributes
+        include ViewComponentAttributes::WithRootAttributes
 
         attribute :type
 
@@ -38,7 +38,7 @@ describe WithRootAttributes do
   describe "#root_attributes" do
     it "Merges the default, template and unknown attributes" do
       component_class = Class.new do
-        include WithRootAttributes
+        include ViewComponentAttributes::WithRootAttributes
 
         attribute :type
 
@@ -59,7 +59,7 @@ describe WithRootAttributes do
         },
         type: "info",
         id: "the-id",
-        class: {'another-class': true}
+        class: {"another-class": true}
       )
 
       expect(component.root_attributes(class: "some-class")).to eq({
