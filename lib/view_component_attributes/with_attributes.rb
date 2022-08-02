@@ -1,3 +1,6 @@
+require "active_support"
+require "active_model"
+
 module ViewComponentAttributes
   module WithAttributes
     extend ActiveSupport::Concern

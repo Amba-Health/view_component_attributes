@@ -11,7 +11,9 @@ PATH
   remote: .
   specs:
     view_component_attributes (0.1.1)
+      actionview
       activemodel
+      activesupport
       view_component
       zeitwerk
 

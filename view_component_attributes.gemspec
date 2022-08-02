@@ -32,4 +32,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "zeitwerk"
   spec.add_dependency "view_component"
   spec.add_dependency "activemodel"
+  spec.add_dependency "actionview"
+  spec.add_dependency "activesupport"
 end

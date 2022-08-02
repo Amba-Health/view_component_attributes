@@ -1,3 +1,4 @@
+require "active_support"
 module ViewComponentAttributes
   module WithUnknownAttributes
     ##
